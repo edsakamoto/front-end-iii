@@ -1,10 +1,10 @@
 import './style.scss'
-export function SegundaAula(){
+export function LessonTwo(){
 
     return(
-        <main className="SegundaAula">
+        <main className="LessonTwo">
 
-            <h1>Segunda Aula</h1>
+            <h1>Lesson Two</h1>
             <h2>Projeto escolhido: Youtube</h2>
             <ul>
                 <li>O header seria um componente: id="masthead-container"</li>

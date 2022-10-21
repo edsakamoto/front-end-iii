@@ -1,12 +1,16 @@
 import { Login } from './pages/Login'
-import { SegundaAula } from './aulas/SegundaAula'
+import { LessonTwo } from './lessons/LessonTwo'
+import { LessonThree } from './lessons/LessonThree'
 function App() {
 
   return (    
+    <>
+      {/* <Login /> */}
 
-      // <Login />
-
-      <SegundaAula />   
+      {/* <LessonTwo />    */}
+      
+      <LessonThree />
+    </>
 
   )
 
