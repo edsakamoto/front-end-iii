@@ -119,7 +119,7 @@ export function Games(){
     return(
         <div className = 'game-site'>
 
-            <section className='mini-card-new-game'>
+            <section className='mini-card'>
                 <h2>New Games</h2>
                 <ul className='components-finded-mini-card'>
                     {
@@ -137,7 +137,7 @@ export function Games(){
             
             </section>
 
-            <section className='medium-card-holiday-offers-games'>
+            <section className='medium-card'>
                 <h2>{holiday + ' Offers'} </h2>
                 <ul className="components-finded-medium-card">
                     {
@@ -158,7 +158,7 @@ export function Games(){
                 </ul>
             </section>
 
-            <section className='mini-card-early-access-game'>
+            <section className='mini-card'>
                 <h2>New Games</h2>
                 <ul className='components-finded-mini-card'>
                     {
@@ -171,6 +171,28 @@ export function Games(){
                                 )
                             }
                         )
+                    }
+                </ul>
+            </section>
+
+
+            <section className='medium-card-games'>
+                <h2>{'Cheap Games' + ' Offers'} </h2>
+                <ul className="components-finded-medium-card">
+                    {
+                        
+                        cheapGames.map(
+
+                            mappingGame =>{
+                                return(
+                                    <GameItemMediumCard 
+                                        game ={mappingGame}
+                                    />
+                                )
+                            }
+
+                        )
+
                     }
                 </ul>
             </section>    
