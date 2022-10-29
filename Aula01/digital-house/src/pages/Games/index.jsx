@@ -124,11 +124,11 @@ export function Games(){
                 <ul className='components-finded-mini-card'>
                     {
                         newGames.map(
-                            newGame =>{
+                            mappingGame =>{
                                 return (
                                    <GameItemMiniCard 
-                                    itemNewGame={newGame}                                   
-                                   />
+                                        game={mappingGame}                                   
+                                   />                           
                                 )
                             }
                         )
@@ -144,10 +144,10 @@ export function Games(){
                         // holiday.toLowerCase()+'Games'.map(
                         halloweenGames.map(
 
-                            holidayOfferGame =>{
+                            mappingGame =>{
                                 return(
                                     <GameItemMediumCard 
-                                        itemHolidayGame ={holidayOfferGame}
+                                        game ={mappingGame}
                                     />
                                 )
                             }
@@ -163,10 +163,10 @@ export function Games(){
                 <ul className='components-finded-mini-card'>
                     {
                         earlyAccessGames.map(
-                            earlyAcessGame =>{
+                            mappingGame =>{
                                 return (
                                    <GameItemMiniCard //type=mini
-                                    itemEarlyAcessGame={earlyAcessGame}                                   
+                                   game={mappingGame}                                   
                                    />
                                 )
                             }
