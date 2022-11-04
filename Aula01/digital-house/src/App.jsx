@@ -3,8 +3,9 @@
 // import { LessonTwo } from './lessons/LessonTwo'
 // import { LessonThree } from './lessons/LessonThree'
 // import { LessonFour } from './lessons/LessonFour'
+// import { Games } from "./pages/Games"
+import { LessonSeven } from "./lessons/LessonSeven"
 
-import { Games } from "./pages/Games"
 
 // import { LessonFive } from './lessons/LessonFive'
 function App() {
@@ -15,7 +16,8 @@ function App() {
     // <LessonThree />
     // <LessonFour />
     // <LessonFive />
-    <Games />
+    // <Games />
+    <LessonSeven />
   )
 
 }
