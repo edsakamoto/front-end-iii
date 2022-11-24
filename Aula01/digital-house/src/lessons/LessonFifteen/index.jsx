@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { useParams } from "react-router-dom"
 import { LessonFifteenItem } from "../../components/LessonFifteenItem"
 import './style.scss'
 
@@ -7,6 +8,8 @@ export function LessonFifteen(){
     const [locations, setLocations] = useState([])
     const [cep, setCep] = useState('')
     const [cepError,setCepError] = useState(false)
+
+    //const { id } = useParams()
 
     function searchCep(cepReceived){
 

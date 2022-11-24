@@ -2,34 +2,70 @@ import { Link, Outlet } from 'react-router-dom'
 import './style.scss'
 
 export function MainLayout(){
+
+    const aulas = [
+        {
+            id:2,
+            descricao:'lesson-two'
+        },
+        {
+            id:3,
+            descricao:'lesson-three'
+        },
+        {
+            id:4,
+            descricao:'lesson-four'
+        },
+        {
+            id:7,
+            descricao:'lesson-seven'
+        },
+        {
+            id:13,
+            descricao:'lesson-thirteen'
+        },
+        {
+            id: 14,
+            descricao: 'lesson-fourteen'
+        },
+        {
+            id: 15,
+            descricao: 'lesson-fifteen'
+        }
+    ]
+
     return (
         <div className="main-layout-component">
-            <header className='main-layout-component-header'>
+            <nav className='main-layout-component-header'>
                 
-                <h1>Layout principal</h1>
+                <h1>Index</h1>
+
+                {
+                    aulas.map(
+                        aula => {
+                            return(
+                                <ul>
+                                    <li>                                        
+                                        <Link to={aula.descricao}>
+                                            {`${aula.descricao.split('-')[0].charAt(0).toUpperCase() + aula.descricao.split('-')[0].slice(1) 
+                                                + ' ' + 
+                                                aula.descricao.split('-')[1].charAt(0).toUpperCase() + aula.descricao.split('-')[1].slice(1)}`}
+                                        </Link>
+                                    </li>
+                                </ul>
+                            )
+                        }
+                    )
+                }
 
 
-                <ul>
+                
 
-                    <li>
-
-                        <Link to="lesson-fourteen">Lesson Fourteen</Link>
-
-                    </li>
-
-                    <li>
-
-                        <Link to="lesson-fifteen">Lesson Fifteen</Link>
-
-                    </li>
-                    
-                </ul>
-
-            </header>
+            </nav>
 
             <main className='main-layout-component-main'>
 
-                <p>o conteudo carregado</p>
+                <p>Content loaded</p>
 
                 <Outlet />
                 

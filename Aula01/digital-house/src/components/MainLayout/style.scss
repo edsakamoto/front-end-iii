@@ -1,16 +1,40 @@
 .main-layout-component{
+    background-color: #404040;
 
     .main-layout-component-header{
 
-        background-color: #404040;
+        //background-color: #404040;
         padding: 42px;
         margin-bottom: 12px;
+        display: block;
+        position: fixed;
+        top: 4rem;
+        bottom: 0;
+        //display: none;
+        
+        
+        
 
     }
 
     .main-layout-component-main{
         background-color: #505050;
         padding: 42px;
+        column-gap: 2rem;
+        // row-gap: 3rem;
+        grid-template-rows: repeat(0,minmax(0,1fr));
+        grid-template-columns: repeat(1,minmax(0,1fr));
+        max-width: none;
+        display: grid;
+        margin-bottom: 1rem;
+        // margin-top: 1rem;
+        padding-left: 3rem;
+        padding-right: 2rem;
+        margin-left: 15rem;
+        padding-bottom: 1rem;
+        padding-top: 2rem;
+        min-height: 60vh;
+        
     }
 
 
