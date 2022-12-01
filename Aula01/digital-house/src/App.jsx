@@ -18,6 +18,8 @@ import { LessonThirteen } from "./lessons/LessonThirteen"
  import { LessonFifteen } from "./lessons/LessonFifteen"
 import { LessonSixteen } from "./lessons/LessonSixteen"
 import { Todo } from "./pages/Todo";
+import { LessonSeventeen } from "./lessons/LessonSeventeen";
+import { ConfigurationProvider } from "./hooks/configuration";
 
 
 
@@ -62,7 +64,17 @@ function App() {
         {
           path: 'lesson-fifteen',
           element: <LessonFifteen/>
-        }    
+        },
+        {
+          path: 'lesson-seventeen',
+          element: <LessonSeventeen/>,
+          children: [
+            {
+              path: 'post',
+              element: <LessonSeventeen />
+            }
+          ]
+        }      
         // {
         //   path: 'lesson-fifteen/:id',
         //   element: <LessonFifteen/>
@@ -70,7 +82,7 @@ function App() {
       ]
     },
     {
-      path: 'to-do',
+      path: 'lesson-todo',
       element: <Todo />
     }
   ]);
@@ -88,7 +100,9 @@ function App() {
     // <LessonFourteen />    
     // <LessonFifteen />
     // <LessonSixteen />
-    <RouterProvider router={appRouter}/>
+    <ConfigurationProvider>
+      <RouterProvider router={appRouter}/>
+    </ConfigurationProvider>
   )
 
 }
